@@ -6,7 +6,7 @@ import router from './router'
 import {sync} from 'vuex-router-sync'
 import store from './store'
 import VueResource from 'vue-resource'
-import BackHeader from '@/components/Header.vue'
+import BackHeader from '@/views/Dashboard.vue'
 
 Vue.component('back-header', BackHeader)
 

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1> User Login </h1>
+    <div class="login">
+        <h1> User Login </h1> <hr/>
         <form v-on:submit.prevent="onLogin">
             <p>Username: <input type="text" v-model="email" /></p>
             <p>Password: <input type="password" v-model="password" /></p>
@@ -9,6 +9,7 @@
         </form>
     </div>
 </template>
+
 <script>
 import AuthenService from '@/services/AuthenService'
 
@@ -46,11 +47,13 @@ export default {
     },
 }
 </script>
+
 <style scoped>
-.error{
+    .error{
     color: red;
   }
-  button{
+
+    button{
 	    height:40px;
 	    padding: 5px 5px;
 	    margin: 10px 0px;
@@ -65,4 +68,6 @@ export default {
     button:hover{
 	    background-color:#711f1b;
     }
+
+
 </style>

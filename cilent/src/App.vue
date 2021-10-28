@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-     <back-header />
+    <back-header/>
     <!--<img src="./assets/logo.png">-->
-    <router-view/>
   </div> 
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Home'
 }
 </script>
 
@@ -19,15 +18,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter-to {
-  opacity: 1;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 </style>
