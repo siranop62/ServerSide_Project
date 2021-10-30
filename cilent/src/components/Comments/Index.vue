@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="comment">
         <h2>Get all comments</h2>
         <!-- <p><button v-on:click="logout">Logout</button></p> -->
-        <h4>จำนวน comment {{comments.length}}</h4>
+        <hr/><h4>จำนวน comment {{comments.length}}</h4>
         <div v-for="comment in comments" v-bind:key="comment.id">
             <p>id : {{ comment.id }}</p>
             <p>blog id : {{ comment.blogId }}</p>
@@ -56,4 +56,9 @@ methods: {
 }
 </script>
 <style scoped>
+    .comment {
+        margin-left: 10px;
+        margin-top: 10;
+        margin-right: 10;
+    }
 </style>

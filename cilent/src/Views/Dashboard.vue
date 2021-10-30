@@ -23,14 +23,12 @@ export default {
         display: grid;
         grid-template-columns: 1fr 5fr;
         background-color: teal;
-        height: 100vh;
+        height: 125vh;
         width: 100vw;
     }
 
     .content {
         background-color: white;
-        border-radius: 20px;
-        margin: 6px 6px 6px 0px;
     }
 
     

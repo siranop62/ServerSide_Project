@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="blogs">
         <h2> Get all blogs </h2>
 
         <!-- <p><button v-on:click="logout"> Logout </button></p> -->
 
-        <h4> จำนวนblog {{blogs.length}}</h4>
+        <hr/><h4> จำนวนblog {{blogs.length}}</h4>
         <p><button v-on:click="navigateTo('/blog/create')"> สร้างblog </button></p>
         <div v-for="blog in blogs" v-bind:key="blog.id">
             <p>id: {{ blog.id }} </p>
@@ -61,4 +61,9 @@ export default {
 }
 </script>
 <style scoped>
+    .blogs {
+        margin-left: 10px;
+        margin-top: 10;
+        margin-right: 10;
+    }
 </style>

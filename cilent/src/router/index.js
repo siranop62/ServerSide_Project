@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Dashboard from '@/views/Dashboard.vue'
+/* import Dashboard from '@/views/Dashboard.vue' */
 
 import UserIndex from '@/components/Users/Index'
 import UserCreate from '@/components/Users/CreateUser'
 import UserEdit from '@/components/Users/EditUser'
 import UserShow from '@/components/Users/ShowUser'
-import Login from '@/Views/Login'
+import Login from '@/components/Login'
 
 import CommentIndex from '@/components/Comments/Index'
 
@@ -20,23 +20,6 @@ import Upload from '@/components/Utils/Upload'
 
 //Authen
 Vue.use(Router)
-
-const routes = [
-  {
-    path: '/',
-    component: Dashboard,
-    children: [
-      {
-        path: '',
-        component: () => import('../Views/Overview')
-      },
-      {
-        path: '/product',
-        component: () => import('../Views/Product')
-      },
-    ]
-  }
-]
 
 export default new Router({
   mode: 'history',

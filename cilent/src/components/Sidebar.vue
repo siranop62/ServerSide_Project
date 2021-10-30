@@ -1,29 +1,32 @@
 <template>
     <div class="sidebar">
         <div class="title">
-            Simple Sidebar
+            House Flipper
         </div>
         <div class="manu-item">
-            <router-link to="/" active-class="active" exact tag="button" class="side-btn">
+            <router-link :to="{ name: 'blogs' }" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">
-                    Overview
+                    Blogs
                 </div>
             </router-link>
-            <router-link to="/product" active-class="active" exact tag="button" class="side-btn">
+            <router-link :to="{ name: 'comments' }" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">
-                    Product
+                    Comments
                 </div>
             </router-link>
-            <router-link to="/login" active-class="active" exact tag="button" class="side-btn">
+            <router-link :to="{ name: 'users' }" active-class="active" exact tag="button" class="side-btn">
+                <div class="link-container">
+                    Users Account
+                </div>
+            </router-link>
+            <router-link :to="{ name: 'login' }" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">
                     Login
                 </div>
             </router-link>
-            <router-link to="/" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container"> 
-                    <a v-on:click.prevent="logout" href="#">
-                    Logout 
-                    </a>
+            <router-link active-class="active" exact tag="button" class="side-btn">
+                <div class="link-container">
+                    <a v-on:click="logout" a href="login"> Logout</a>
                 </div>
             </router-link>
         </div>
@@ -32,16 +35,16 @@
 
 <script>
 export default {
-    methods:{
-  logout () {
-          this.$store.dispatch('setToken', null)
-          this.$store.dispatch('setUser', null)
-          this.$router.push({
-            name: 'login'
-    })
+    methods: {
+    logout() {
+            this.$store.dispatch("setToken", null);
+            this.$store.dispatch("setBlog", null);
+            this.$router.push({
+                name: "login",
+            });
+        },
     }
-  }
-}
+};
 </script>
 
 <style scoped>
@@ -49,12 +52,14 @@ export default {
         color: rgb(255, 255, 255);
         font-size: 30px;
         margin-top: 60px;
+        margin-left: 10px;
     }
 
     .manu-item {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 30px;
+        margin-left: 6px;
     }
 
     .manu-item > * {
@@ -66,9 +71,32 @@ export default {
     }
 
     .side-btn.active {
-        background-color: rgb(154, 210, 255);
+        position: relative;
+        background-color: white;
         color: rgb(0, 110, 138);
         font-weight: 500;
+        margin-left: 6px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .side-btn.active::before{
+        position: absolute;
+        content: "";
+        top: -30px;
+        right: 0;
+        height: 30px;
+        width: 30px;
+        background-color: white;
+    }
+
+    .side-btn.active::after{
+        position: absolute;
+        content: "";
+        bottom: -30px;
+        right: 0;
+        height: 30px;
+        width: 30px;
+        background-color: white;
     }
 
     .side-btn {
@@ -76,10 +104,32 @@ export default {
         padding: 16px 0px;
         cursor: pointer;
         font-size: 16px;
-        color: rgb(156, 135, 253);
+        color: white;
+        background-color: transparent;
     }
 
-    .clearfix {
-        clear: left;
+    .side-btn.active .link-container::before {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        content: "";
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: teal;
     }
+
+    .side-btn.active .link-container::after {
+        position: absolute;
+        bottom: -60px;
+        right: 0;
+        content: "";
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: teal;
+        z-index: 99;
+    }
+
+
 </style>
