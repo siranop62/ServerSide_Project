@@ -3,7 +3,10 @@
     <h1>Get All Users</h1>
     <hr/><div v-if="users.length">
         <h4>จำนวนผู้ใช้งาน {{users.length}}</h4>
-        <p><button v-on:click="navigateTo('/user/create')">สร้างผู้ใช้งาน</button></p>
+        <b-button-group><p>
+            <b-button variant="primary" v-on:click="navigateTo('/user/create')">สร้างผู้ใช้งาน</b-button>
+            <b-button variant="danger" v-on:click="logout">Logout</b-button>
+        </p></b-button-group>
         <div v-for="user in users" v-bind:key="user.id">
             <p>ID : {{user.id}}</p>
             <p>ชื่อ-นามสกุล : {{user.name}} - {{user.lastname}}</p>
@@ -16,7 +19,6 @@
             </p></b-button-group>
             <hr>
         </div>
-        <p><button v-on:click="logout">Logout</button></p>
     </div>
 </div>
 </template>

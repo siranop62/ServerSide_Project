@@ -5,7 +5,9 @@
         <!-- <p><button v-on:click="logout"> Logout </button></p> -->
 
         <hr/><h4> จำนวนblog {{blogs.length}}</h4>
-        <p><button v-on:click="navigateTo('/blog/create')"> สร้างblog </button></p>
+        <b-button-group><p>
+            <b-button variant="success" v-on:click="navigateTo('/blog/create')"> สร้างblog </b-button>
+        </p></b-button-group>
         <div v-for="blog in blogs" v-bind:key="blog.id">
             <p>id: {{ blog.id }} </p>
             <p>title: {{ blog.title }} </p>

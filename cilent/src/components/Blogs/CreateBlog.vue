@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cb">
     <h1>Create Blog</h1>
     <form v-on:submit.prevent="createBlog">
       <p>title: <input type="text" v-model="blog.title" /></p>
@@ -386,4 +386,9 @@ ul.pictures li img{
 .thumbnail-pic img{
   width: 200px;
 }
+.cb {
+        margin-left: 10px;
+        margin-top: 10;
+        margin-right: 10;
+    }
 </style>

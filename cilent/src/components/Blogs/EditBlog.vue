@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="eb">
     <h1>Edit Blog</h1>
     <form v-on:submit.prevent="editBlog">
       <p>title: <input type="text" v-model="blog.title" /></p>
@@ -416,4 +416,9 @@ ul.pictures li img{
 .thumbnail-pic img{
   width: 200px;
 }
+.eb {
+        margin-left: 10px;
+        margin-top: 10;
+        margin-right: 10;
+    }
 </style>

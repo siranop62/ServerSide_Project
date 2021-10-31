@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="sb">
         <h1> Show Blog </h1>
             <p>id: {{ blog.id }} </p>
             <p>title: {{ blog.title }} </p>
@@ -36,4 +36,9 @@ export default {
 }
 </script>
 <style scoped>
+.sb {
+        margin-left: 10px;
+        margin-top: 10;
+        margin-right: 10;
+    }
 </style>
