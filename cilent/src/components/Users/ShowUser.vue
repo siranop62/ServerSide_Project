@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="SU">
         <h1>Show User</h1>
         <p>ID : {{ user.id }} </p>
         <p>ชื่อ - นามสกุล {{user.name}} - {{user.lastname}}</p>
@@ -26,4 +26,9 @@ export default {
 };
 </script>
 <style scoped>
+    .SU {
+        margin-left: 10px;
+        margin-top: 10;
+        margin-right: 10;
+    }
 </style>

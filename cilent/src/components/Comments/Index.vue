@@ -7,10 +7,9 @@
             <p>id : {{ comment.id }}</p>
             <p>blog id : {{ comment.blogId }}</p>
             <p>comment : {{ comment.comment }}</p>
-            <p>
-                <button v-on:click="navigateTo('/comment/'+ comment.id)">ดู comment</button>
-                <button v-on:click="deleteComment(comment)">ลบข้อมูล</button>
-            </p>
+            <b-button-group><p>
+                <b-button v-on:click="deleteComment(comment)">ลบข้อมูล</b-button>
+            </p></b-button-group>
             <hr />
         </div>
     </div>

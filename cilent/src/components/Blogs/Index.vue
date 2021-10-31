@@ -12,11 +12,11 @@
             <p>content: {{ blog.content }} </p>
             <p>category: {{ blog.category }} </p>
             <p>status: {{ blog.status }} </p>
-            <p>
-                <button v-on:click="navigateTo('/blog/'+ blog.id)"> ดูblog </button>
-                <button v-on:click="navigateTo('/blog/edit/'+ blog.id)"> แก้ไขblog </button>
-                <button v-on:click="deleteBlog(blog)"> ลบข้อมูล </button>
-            </p>
+            <b-button-group><p>
+                <b-button v-on:click="navigateTo('/blog/'+ blog.id)"> ดูblog </b-button>
+                <b-button v-on:click="navigateTo('/blog/edit/'+ blog.id)"> แก้ไขblog </b-button>
+                <b-button v-on:click="deleteBlog(blog)"> ลบข้อมูล </b-button>
+            </p></b-button-group>
             <hr>
         </div>
     </div>

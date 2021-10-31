@@ -9,9 +9,11 @@
             <p>ชื่อ-นามสกุล : {{user.name}} - {{user.lastname}}</p>
             <p>Email : {{user.email}}</p>
             <p>Password : {{user.password}}</p>
-            <p><button v-on:click="navigateTo('/user/'+user.id)">ดูข้อมูลผู้ใช้</button>
-               <button v-on:click="navigateTo('/user/edit/'+user.id)">แก้ไขข้อมูล</button>
-               <button v-on:click="deleteUser(user)">ลบข้อมูล</button></p>
+            <b-button-group><p>
+                <b-button v-on:click="navigateTo('/user/'+user.id)">ดูข้อมูลผู้ใช้</b-button>
+                <b-button v-on:click="navigateTo('/user/edit/'+user.id)">แก้ไขข้อมูล</b-button>
+                <b-button v-on:click="deleteUser(user)">ลบข้อมูล</b-button>
+            </p></b-button-group>
             <hr>
         </div>
         <p><button v-on:click="logout">Logout</button></p>

@@ -1,4 +1,5 @@
 <template>
+<center>
   <div class="container">
     <center>
     <h1>User Login</h1>
@@ -12,6 +13,7 @@
     </form>
     </center>
   </div>
+</center>
 </template>
 <script>
 import AuthenService from "@/services/AuthenService";
@@ -57,7 +59,8 @@ export default {
     color:red;
   }
   div {
-    margin-left: 17%;
+    margin-left: 16%;
+    margin-top: 19%;
 }
 /* Style inputs with type="text", select elements and textareas */
 p[type=text], select, textarea {

@@ -1,8 +1,8 @@
 <template>
     <div class="sidebar">
-        <div class="title">
+        <div class="title"><center>
             House Flipper
-        </div>
+        </center></div>
         <div class="manu-item">
             <router-link :to="{ name: 'blogs' }" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">
@@ -50,9 +50,8 @@ export default {
 <style scoped>
     .title {
         color: rgb(255, 255, 255);
-        font-size: 30px;
+        font-size: 40px;
         margin-top: 60px;
-        margin-left: 10px;
     }
 
     .manu-item {

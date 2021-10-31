@@ -15,7 +15,7 @@
                         <input type="text" v-model="user.name" placeholder="Name"></label>
                     </div>
                 <div class="col">
-                         <label for="lname"> Lastname
+                        <label for="lname"> Lastname
                         <input type="text" v-model="user.lastname" placeholder="Lastname"></label>
                     </div>
                 </div>
