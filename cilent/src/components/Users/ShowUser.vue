@@ -5,6 +5,9 @@
         <p>ชื่อ - นามสกุล {{user.name}} - {{user.lastname}}</p>
         <p>Email : {{user.email}} </p>
         <p>Password : {{user.password}}</p>
+        <b-button-group><p>
+                <b-button v-on:click="navigateTo('/users')"> กลับ </b-button>
+        </p></b-button-group>
     </div>
 </template>
 <script>
@@ -14,6 +17,12 @@ export default {
         return {
             user: null,
         };
+    },
+    methods: {
+        navigateTo(route) {
+        console.log(route);
+        this.$router.push(route);
+        },
     },
     async created() {
         try {

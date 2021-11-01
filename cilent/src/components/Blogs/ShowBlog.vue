@@ -6,10 +6,10 @@
             <p>content: {{ blog.content }} </p>
             <p>category: {{ blog.category }} </p>
             <p>status: {{ blog.status }} </p>
-            <p>
-                <button v-on:click="navigateTo('/blog/edit/'+blog.id)"> แก้ไขblog </button>
-                <button v-on:click="navigateTo('/blogs')"> กลับ </button>
-            </p>
+            <b-button-group><p>
+                <b-button v-on:click="navigateTo('/blog/edit/'+blog.id)"> แก้ไขblog </b-button>
+                <b-button v-on:click="navigateTo('/blogs')"> กลับ </b-button>
+            </p></b-button-group>
     </div>
 </template>
 <script>

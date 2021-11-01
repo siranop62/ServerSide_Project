@@ -36,8 +36,10 @@
                     :src="BASE_URL+picture.name"
                     alt="picture image">
                     <br />
-                    <button v-on:click.prevent="delFile(picture)">Delete</button>
-                    <button v-on:click.prevent="useThumbnail(picture.name)">Thumbnail</button>
+                    <b-button-group>
+                      <b-button variant="danger" v-on:click.prevent="delFile(picture)">Delete</b-button>
+                      <b-button variant="primary" v-on:click.prevent="useThumbnail(picture.name)">Thumbnail</b-button>
+                    </b-button-group>
                 </li>
             </ul>
         </div>
@@ -53,9 +55,10 @@
       </p>
       <p>category: <input type="text" v-model="blog.category" /></p>
       <p>status: <input type="text" v-model="blog.status" /></p>
-      <p><button type="submit">Update Blog</button>
-         <button v-on:click="navigateTo('/blogs')">Back</button>
-      </p>
+      <b-button-group><p>
+        <b-button variant="success" type="submit">create blog</b-button>
+        <b-button variant="dark" v-on:click="navigateTo('/blogs')">Back</b-button>
+      </p></b-button-group>
     </form>
   </div>
 </template>

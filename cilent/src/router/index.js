@@ -8,7 +8,7 @@ import UserEdit from '@/components/Users/EditUser'
 import UserShow from '@/components/Users/ShowUser'
 import Login from '@/components/Login'
 
-import CommentIndex from '@/components/Comments/Index'
+import CommentIndex from '@/components/Home/Index'
 
 //Blog
 import BlogIndex from '@/components/Blogs/Index'
@@ -72,8 +72,8 @@ export default new Router({
 
     //comment
     {
-      path: '/comments',
-      name: 'comments',
+      path: '/home',
+      name: 'home',
       component: CommentIndex
     },
     {

@@ -1,17 +1,20 @@
 <template>
     <div class="sidebar">
-        <div class="title"><center>
+        <div class="title"><center>  
+            <div class="img">
+                <p><img src="../assets/logo.jpg"></p>
+            </div>
             House Flipper
         </center></div>
         <div class="manu-item">
+            <router-link :to="{ name: 'home' }" active-class="active" exact tag="button" class="side-btn">
+                <div class="link-container">
+                    Home
+                </div>
+            </router-link>
             <router-link :to="{ name: 'blogs' }" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">
                     Blogs
-                </div>
-            </router-link>
-            <router-link :to="{ name: 'comments' }" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container">
-                    Comments
                 </div>
             </router-link>
             <router-link :to="{ name: 'users' }" active-class="active" exact tag="button" class="side-btn">
@@ -48,7 +51,11 @@ export default {
 </script>
 
 <style scoped>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:wght@300&display=swap');
     .title {
+        font-family: 'Ubuntu', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         color: rgb(255, 255, 255);
         font-size: 40px;
         margin-top: 60px;
@@ -57,7 +64,7 @@ export default {
     .manu-item {
         display: flex;
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 10px;
         margin-left: 6px;
     }
 
@@ -128,6 +135,11 @@ export default {
         border-radius: 50%;
         background-color: teal;
         z-index: 99;
+    }
+
+    div.img img {
+        width: 250px;
+        height: 250px;
     }
 
 
