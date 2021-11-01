@@ -392,8 +392,8 @@ ul.pictures li img{
   width: 200px;
 }
 .cb {
-        margin-left: 10px;
-        margin-top: 10;
-        margin-right: 10;
-    }
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
 </style>

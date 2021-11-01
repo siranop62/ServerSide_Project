@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@vue/cli": "^4.5.15",
     "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.2",
     "mdbvue": "^6.7.3",

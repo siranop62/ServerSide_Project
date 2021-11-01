@@ -37,7 +37,7 @@ export default {
 <style scoped>
     .SU {
         margin-left: 10px;
-        margin-top: 10;
-        margin-right: 10;
+        margin-top: 10px;
+        margin-right: 10px;
     }
 </style>

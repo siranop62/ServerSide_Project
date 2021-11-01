@@ -421,7 +421,7 @@ ul.pictures li img{
 }
 .eb {
         margin-left: 10px;
-        margin-top: 10;
-        margin-right: 10;
+        margin-top: 10px;
+        margin-right: 10px;
     }
 </style>

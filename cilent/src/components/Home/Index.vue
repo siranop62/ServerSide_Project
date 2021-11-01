@@ -1,63 +1,52 @@
 <template>
     <div class="comment">
-        <h2>Get all comments</h2>
-        <!-- <p><button v-on:click="logout">Logout</button></p> -->
-        <hr/><h4>จำนวน comment {{comments.length}}</h4>
-        <div v-for="comment in comments" v-bind:key="comment.id">
-            <p>id : {{ comment.id }}</p>
-            <p>blog id : {{ comment.blogId }}</p>
-            <p>comment : {{ comment.comment }}</p>
-            <b-button-group><p>
-                <b-button v-on:click="deleteComment(comment)">ลบข้อมูล</b-button>
-            </p></b-button-group>
-            <hr />
+        <div class="banner-bg" id="top">
+            <div class="banner-overlay"></div>
+            <div class="welcome-text">
+                <h2>Why | "House Flipper"?</h2>
+                <h5>We are professional in cleaning services for more than 27 years, committed to developing a strong team and skilled in working in all areas. To enhance the ability to complete cleaning tasks meet the variety and meet the needs of the building Customer locations in all business segments And we believe that a good and motivated team Will be able to deliver quality work with service heart To give you experience in service and the best quality from our professional team
+                    <hr>
+                    <br>
+                    - Meet the needs of customers To provide efficient and fast service
+                    <br>
+                    - 24 hour cleaning service
+                    <br>
+                    - The company has been certified ISO 9001-2015 according to international quality standards.
+                    <br>
+                    - Use technology and innovation in work processes
+                    <br>
+                    - Use non-toxic and chemical free biological agents in cleaning work to provide health and safety in life. and customer property.</h5>
+            </div>
         </div>
     </div>
 </template>
 <script>
-import CommentsService from '@/services/CommentsService'
 
 export default {
-data () {
-    return {
-        comments: []
-    }
-},
-async created () {
-    this.comments = (await CommentsService.index()).data
-},
-methods: {
-    logout () {
-        this.$store.dispatch('setToken', null)
-        this.$store.dispatch('setComment', null)
-        this.$router.push({
-            name: 'login'
-        })
-    },
-    navigateTo (route) {
-        this.$router.push(route)
-    },
-    async deleteComment (comment) {
-        let result = confirm("Want to delete?")
-        if (result) {
-            try {
-                await CommentsService.delete(comment)
-                this.refreshData()
-            } catch (err) {
-                console.log(err)
-            }
-        }
-    },
-    async refreshData() {
-        this.comments = (await CommentsService.index()).data
-    }
-}
+
 }
 </script>
 <style scoped>
     .comment {
         margin-left: 10px;
-        margin-top: 10;
-        margin-right: 10;
+        margin-top: 10px;
+        margin-right: 10px;
     }
+    .banner-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.103);
+        top: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    .banner-bg {
+	    padding: 260px 80px;
+	    position: relative;
+	    background-position: center;
+	    background-size: cover;
+	    z-index: 2;
+}
 </style>
