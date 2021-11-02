@@ -1,7 +1,7 @@
 <template>
   <div class="cb">
-    <h1>Create Blog</h1>
-    <form v-on:submit.prevent="createBlog">
+    <h1>Create work</h1>
+    <form v-on:submit.prevent="createWork">
       <p>title: <input type="text" v-model="blog.title" /></p>
       <transition name="fade">
       <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
@@ -23,14 +23,14 @@
           accept="image/*"
           class="input-file"
         />
-        <!-- <p v-if="isInitial || isSuccess"/> -->
+        <br><!-- <p v-if="isInitial || isSuccess"/> -->
         <p v-if="isInitial">Drag your files(s) <br> here to begin or click to browse</p>
         <p v-if="isSaving">Uploading {{ fileCount }} files...</p>
         <p v-if="isSuccess">Upload Successful.</p>
         <p v-if= "isFailed">Upload Failed</p>
         </div>
         <div>
-            <ul class="pictures">
+            <p><ul class="pictures">
                 <li v-for="picture in pictures" v-bind:key="picture.id">
                     <img style="margin-bottom:5px;"
                     :src="BASE_URL+picture.name"
@@ -41,9 +41,11 @@
                       <b-button variant="primary" v-on:click.prevent="useThumbnail(picture.name)">Thumbnail</b-button>
                     </b-button-group>
                 </li>
-            </ul>
+            </ul></p>
         </div>
       </form>
+      <hr>
+      <br>
       <p><strong>content: </strong></p>
       <p>
         <vue-ckeditor
@@ -57,7 +59,7 @@
       <p>category: <input type="text" v-model="blog.category" /></p>
       <p>status: <input type="text" v-model="blog.status" /></p>
       <b-button-group><p>
-        <b-button variant="success" type="submit">create blog</b-button>
+        <b-button variant="success" type="submit">create work</b-button>
         <b-button variant="dark" v-on:click="navigateTo('/blogs')">Back</b-button>
       </p></b-button-group>
     </form>

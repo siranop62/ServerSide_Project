@@ -1,14 +1,14 @@
 <template>
     <div class="sb">
-        <h1> Show Blog </h1>
+        <h1> Show work </h1>
             <p>id: {{ blog.id }} </p>
             <p>title: {{ blog.title }} </p>
             <p>content: {{ blog.content }} </p>
             <p>category: {{ blog.category }} </p>
             <p>status: {{ blog.status }} </p>
             <b-button-group><p>
-                <b-button v-on:click="navigateTo('/blog/edit/'+blog.id)"> แก้ไขblog </b-button>
-                <b-button v-on:click="navigateTo('/blogs')"> กลับ </b-button>
+                <b-button v-on:click="navigateTo('/blog/edit/'+blog.id)"> Edite task </b-button>
+                <b-button v-on:click="navigateTo('/blogs')"> Back </b-button>
             </p></b-button-group>
     </div>
 </template>

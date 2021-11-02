@@ -1,7 +1,7 @@
 <template>
   <div class="eb">
-    <h1>Edit Blog</h1>
-    <form v-on:submit.prevent="editBlog">
+    <h1>Edit work</h1>
+    <form v-on:submit.prevent="editWork">
       <p>title: <input type="text" v-model="blog.title" /></p>
       <transition name="fade">
       <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
@@ -56,7 +56,7 @@
       <p>category: <input type="text" v-model="blog.category" /></p>
       <p>status: <input type="text" v-model="blog.status" /></p>
       <b-button-group><p>
-        <b-button variant="success" type="submit">create blog</b-button>
+        <b-button variant="success" type="submit">Edite work</b-button>
         <b-button variant="dark" v-on:click="navigateTo('/blogs')">Back</b-button>
       </p></b-button-group>
     </form>
