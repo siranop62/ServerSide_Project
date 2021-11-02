@@ -14,7 +14,7 @@
             </router-link>
             <router-link :to="{ name: 'blogs' }" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">
-                    Blogs
+                    Works
                 </div>
             </router-link>
             <router-link :to="{ name: 'users' }" active-class="active" exact tag="button" class="side-btn">

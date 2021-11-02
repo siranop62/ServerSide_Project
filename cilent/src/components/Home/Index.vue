@@ -2,6 +2,7 @@
     <div class="comment">
         <div class="banner-bg" id="top">
             <div class="banner-overlay"></div>
+            <img src="@/assets/homepik.jpg"><br>
             <div class="welcome-text">
                 <h2>Why | "House Flipper"?</h2>
                 <h5>We are professional in cleaning services for more than 27 years, committed to developing a strong team and skilled in working in all areas. To enhance the ability to complete cleaning tasks meet the variety and meet the needs of the building Customer locations in all business segments And we believe that a good and motivated team Will be able to deliver quality work with service heart To give you experience in service and the best quality from our professional team
@@ -32,21 +33,29 @@ export default {
         margin-top: 10px;
         margin-right: 10px;
     }
+
+    .banner-bg {
+	    padding: 150px 80px;
+	    position: relative;
+        background: ('@/assets/logo.jpg');
+	    background-position: center;
+	    background-size: cover;
+	    z-index: 2;
+    }
+
     .banner-overlay {
         position: absolute;
         width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.103);
+        height: 125vh;
+        background: rgba(180, 180, 180, 0.192);
         top: 0;
         right: 0;
         z-index: 3;
     }
+    
+    img {
+        width: 500px;
+        height: 300px;
+    }
 
-    .banner-bg {
-	    padding: 260px 80px;
-	    position: relative;
-	    background-position: center;
-	    background-size: cover;
-	    z-index: 2;
-}
 </style>

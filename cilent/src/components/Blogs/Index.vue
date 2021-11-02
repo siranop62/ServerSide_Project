@@ -1,12 +1,12 @@
 <template>
     <div class="blogs">
-        <h2> Get all blogs </h2>
+        <h2> Get all work </h2>
 
         <!-- <p><button v-on:click="logout"> Logout </button></p> -->
 
-        <hr/><h4> จำนวนblog {{blogs.length}}</h4>
+        <hr/><h4> Number of tasks {{blogs.length}}</h4>
         <b-button-group><p>
-            <b-button variant="success" v-on:click="navigateTo('/blog/create')"> สร้างblog </b-button>
+            <b-button variant="success" v-on:click="navigateTo('/blog/create')"> Create work </b-button>
         </p></b-button-group>
         <div v-for="blog in blogs" v-bind:key="blog.id">
             <p>id: {{ blog.id }} </p>
@@ -15,9 +15,9 @@
             <p>category: {{ blog.category }} </p>
             <p>status: {{ blog.status }} </p>
             <b-button-group><p>
-                <b-button v-on:click="navigateTo('/blog/'+ blog.id)"> ดูblog </b-button>
-                <b-button v-on:click="navigateTo('/blog/edit/'+ blog.id)"> แก้ไขblog </b-button>
-                <b-button v-on:click="deleteBlog(blog)"> ลบข้อมูล </b-button>
+                <b-button v-on:click="navigateTo('/blog/'+ blog.id)"> View work details</b-button>
+                <b-button v-on:click="navigateTo('/blog/edit/'+ blog.id)"> Edite work </b-button>
+                <b-button v-on:click="deleteBlog(blog)"> Delete </b-button>
             </p></b-button-group>
             <hr>
         </div>
