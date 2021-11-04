@@ -1,7 +1,7 @@
 <template>
   <div class="cb">
     <h1>Create work</h1>
-    <form v-on:submit.prevent="createWork">
+    <form v-on:submit.prevent="createBlog">
       <p>title: <input type="text" v-model="blog.title" /></p>
       <transition name="fade">
       <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
