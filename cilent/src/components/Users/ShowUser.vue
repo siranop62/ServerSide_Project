@@ -32,6 +32,11 @@ export default {
             console.log(error);
         }
     },
+    methods:{
+        navigateTo(route){
+            this.$router.push(route)
+        },
+    },
 };
 </script>
 <style scoped>
