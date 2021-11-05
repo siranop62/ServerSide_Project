@@ -2,7 +2,7 @@
   <div class="eb">
     <h1>Edit work</h1>
     <form v-on:submit.prevent="editBlog">
-      <p>title: <input type="text" v-model="blog.title" /></p>
+      <p>Title : <input type="text" v-model="blog.title" /></p>
       <transition name="fade">
       <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
         <img :src="BASE_URL+blog.thumbnail" alt="thumbnail">
@@ -44,7 +44,7 @@
             </ul>
         </div>
       </form>
-      <p><strong>content: </strong></p>
+      <p><strong>Address and Task detail : </strong></p>
       <p>
         <vue-ckeditor 
           v-model.lazy="blog.content" 
@@ -53,8 +53,8 @@
           @focus="onFocus($event)" 
         />
       </p>
-      <p>category: <input type="text" v-model="blog.category" /></p>
-      <p>status: <input type="text" v-model="blog.status" /></p>
+      <p>Category: <input type="text" v-model="blog.category" /></p>
+      <p>Status: <input type="text" v-model="blog.status" /></p>
       <b-button-group><p>
         <b-button variant="success" type="submit">Edite work</b-button>
         <b-button variant="dark" v-on:click="navigateTo('/blogs')">Back</b-button>
