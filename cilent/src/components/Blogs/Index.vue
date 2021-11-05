@@ -10,10 +10,10 @@
         </p></b-button-group>
         <div v-for="blog in blogs" v-bind:key="blog.id">
             <p>id: {{ blog.id }} </p>
-            <p>title: {{ blog.title }} </p>
-            <p>content: {{ blog.content }} </p>
-            <p>category: {{ blog.category }} </p>
-            <p>status: {{ blog.status }} </p>
+            <p>Title: {{ blog.title }} </p>
+            <p>Address and Task detail : {{ blog.content }} </p>
+            <p>Category : {{ blog.category }} </p>
+            <p>Status: {{ blog.status }} </p>
             <b-button-group><p>
                 <b-button v-on:click="navigateTo('/blog/'+ blog.id)"> View work details</b-button>
                 <b-button v-on:click="navigateTo('/blog/edit/'+ blog.id)"> Edite work </b-button>
